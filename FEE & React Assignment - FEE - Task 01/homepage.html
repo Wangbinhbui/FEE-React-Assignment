@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quizzes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assert/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Quizzes home">
+        <span class="logo" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="3" width="10" height="8" rx="4" fill="#1d4ed8"/>
+            <rect x="14" y="15" width="10" height="8" rx="4" fill="#38bdf8"/>
+          </svg>
+        </span>
+        Quizzes
+      </div>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#">Home</a>
+        <a href="#quizzes">Quizzes</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="auth">
+        <a class="btn ghost" href="#login">Login</a>
+        <a class="btn primary" href="#register">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="container">
+    <section class="hero" id="home">
+      <div>
+        <h1>Welcome to Quiz App</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui voluptatum optio modi ipsa accusantium ipsum, voluptas, fuga molestiae sint distinctio, deserunt perferendis saepe nihil dicta dolor nobis libero sed ea.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#quizzes">Take a Quiz</a>
+          <a class="btn ghost" href="#about">Learn more</a>
+        </div>
+      </div>
+      <div class="illus-wrap" aria-hidden="true">
+        <!-- simple inline illustration -->
+        <svg class="illus" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <!-- clipboard -->
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#fef3c7"/>
+              <stop offset="1" stop-color="#fde68a"/>
+            </linearGradient>
+          </defs>
+          <circle cx="380" cy="370" r="82" fill="#f1f5f9" stroke="#0f172a" stroke-opacity=".05"/>
+          <rect x="120" y="90" rx="20" ry="20" width="270" height="340" fill="url(#g1)" stroke="#eab308" stroke-width="2"/>
+          <rect x="170" y="70" rx="14" ry="14" width="170" height="40" fill="#1e293b"/>
+          <text x="215" y="98" font-size="24" fill="#fff" font-weight="700">Quiz</text>
+          <!-- checklist -->
+          <g fill="#fff">
+            <rect x="150" y="150" width="230" height="54" rx="10"/>
+            <rect x="150" y="214" width="230" height="54" rx="10"/>
+            <rect x="150" y="278" width="230" height="54" rx="10"/>
+          </g>
+          <g stroke="#10b981" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M170 175 l14 14 l24 -24"/>
+            <path d="M170 239 l14 14 l24 -24"/>
+            <path d="M170 303 l14 14 l24 -24"/>
+          </g>
+          <!-- stopwatch -->
+          <g transform="translate(345,330)">
+            <circle r="62" fill="#ffffff" stroke="#ef4444" stroke-width="10"/>
+            <line x1="0" y1="0" x2="0" y2="-28" stroke="#ef4444" stroke-width="10" stroke-linecap="round"/>
+            <line x1="0" y1="0" x2="24" y2="0" stroke="#ef4444" stroke-width="10" stroke-linecap="round"/>
+            <rect x="-14" y="-88" width="28" height="18" rx="4" fill="#ef4444"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Quizzes -->
+    <section id="quizzes" class="quizzes">
+      <h2 class="section-title">QUIZZES</h2>
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="card" aria-label="Capitals of Country quiz">
+          <div class="thumb" style="background:linear-gradient(135deg,#c7d2fe,#bfdbfe)">
+            <span class="meta">15m</span>
+            <svg width="110" height="74" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="200" height="120" rx="10" fill="#eef2ff"/>
+              <path d="M0 80 C30 70, 60 60, 100 65 C140 70, 170 80, 200 78 L200 120 L0 120 Z" fill="#c7d2fe"/>
+              <circle cx="46" cy="60" r="6" fill="#6366f1"/>
+              <circle cx="116" cy="44" r="5" fill="#6366f1"/>
+              <circle cx="158" cy="66" r="5" fill="#6366f1"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>Capitals of Country</h3>
+            <p>Test your knowledge of country capitals.</p>
+            <div class="actions">
+              <span class="pill" title="Questions">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9 12l2 2 4-4"></path></svg>
+                10 Qs
+              </span>
+              <span class="spacer"></span>
+              <a class="btn primary" href="#">Start</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" aria-label="Capitals of Country quiz 2">
+          <div class="thumb" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0)">
+            <span class="meta">10m</span>
+            <svg width="110" height="74" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="200" height="120" rx="10" fill="#ecfeff"/>
+              <g fill="#34d399">
+                <circle cx="40" cy="40" r="16"/>
+                <rect x="70" y="30" width="28" height="28" rx="6"/>
+                <circle cx="124" cy="44" r="14"/>
+                <rect x="146" y="32" width="30" height="30" rx="6"/>
+              </g>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>Capitals of Country</h3>
+            <p>Test your knowledge of country capitals.</p>
+            <div class="actions">
+              <span class="pill" title="Questions">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9 12l2 2 4-4"></path></svg>
+                10 Qs
+              </span>
+              <span class="spacer"></span>
+              <a class="btn primary" href="#">Start</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" aria-label="Capitals of Country quiz 3">
+          <div class="thumb" style="background:linear-gradient(135deg,#e0f2fe,#bae6fd)">
+            <span class="meta">15m</span>
+            <svg width="110" height="74" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="200" height="120" rx="10" fill="#f0f9ff"/>
+              <path d="M18 88c20-8 38-22 62-22s46 14 66 22" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" fill="none"/>
+              <circle cx="64" cy="54" r="6" fill="#0284c7"/>
+              <circle cx="102" cy="48" r="6" fill="#0284c7"/>
+              <circle cx="152" cy="60" r="6" fill="#0284c7"/>
+            </svg>
+          </div>
+          <div class="card-body">
+            <h3>Capitals of Country</h3>
+            <p>Test your knowledge of country capitals.</p>
+            <div class="actions">
+              <span class="pill" title="Questions">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9 12l2 2 4-4"></path></svg>
+                10 Qs
+              </span>
+              <span class="spacer"></span>
+              <a class="btn primary" href="#">Start</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="about">
+    <div class="container foot-grid">
+      <div>
+        <div class="brand-sm">
+          <span class="logo" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="3" width="10" height="8" rx="4" fill="#1d4ed8"/>
+              <rect x="14" y="15" width="10" height="8" rx="4" fill="#38bdf8"/>
+            </svg>
+          </span>
+          Quizzes
+        </div>
+        <p class="muted" style="margin:8px 0 0">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+           Eius necessitatibus eveniet veniam perferendis vel ea officiis, debitis, repellat unde id consequuntur fuga repellendus reiciendis dicta explicabo non! Aliquam, accusamus unde.</p>
+      </div>
+
+      <div>
+        <h4 style="margin:0 0 8px">Menu</h4>
+        <div class="list">
+          <a href="#home">Home</a>
+          <a href="#quizzes">Quizzes</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div id="contact">
+        <h4 style="margin:0 0 8px">Contact</h4>
+        <div class="list muted">
+          <div>✉️ support@quizapp.dev</div>
+          <div>📞 +1 555 021 555</div>
+          <div>🏢 123 Learning Ave, Internet</div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container">© <span id="y">2025</span> • Built as a single‑file HTML demo.</div>
+    </div>
+  </footer>
+
+  <script>
+    // tiny enhancement: keep footer year current
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
