@@ -147,15 +147,19 @@
     </div>
   </footer>
   <script>
-    // simple form handler for demo
     const form = document.getElementById('feedbackForm');
     form?.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = (document.getElementById('name') as HTMLInputElement).value.trim();
+
+      const nameEl = document.getElementById('name');
+      const name = nameEl && 'value' in nameEl ? nameEl.value.trim() : '';
+
       alert(`Thanks, ${name || 'friend'}! Your feedback has been sent.`);
       form.reset();
     });
+
     document.getElementById('y').textContent = new Date().getFullYear().toString();
   </script>
+
 </body>
 </html>
