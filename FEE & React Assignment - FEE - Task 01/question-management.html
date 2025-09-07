@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Question Management • Quizzes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- style chung của site -->
+  <link rel="stylesheet" href="assert/css/homepage.css">
+  <!-- style riêng cho trang này -->
+  <link rel="stylesheet" href="assert/css/question-management.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Quizzes home">
+        <span class="logo" aria-hidden="true">
+          <img src="assert/image/logo.png" alt="logo image">
+        </span>
+        Quizzes
+      </div>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#quizzes">Quizzes</a>
+        <a href="#">Management</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="auth">
+        <a class="btn ghost" href="#login">Login</a>
+        <a class="btn primary" href="#register">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Admin layout -->
+  <div class="container admin">
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Management menu">
+      <div class="sidebar-title">Menu</div>
+      <nav class="menu">
+        <a href="quiz-management.html"><span class="mi"><img src="assert/image/QuizManagement.png" alt="quiz management"
+              style="margin-right:5px"></span> Quiz Management</a>
+        <a class="active" href="question-management.html"><span class="mi"><img
+              src="assert/image/QuestionManagement.png" alt="question management" style="margin-right:5px"></span>
+          Question Management</a>
+        <a href="user-management.html"><span class="mi"><img src="assert/image/UserManagement.png" alt="user management"
+              style="margin-right:5px"></span> User Management</a>
+        <a href="#"><span class="mi"><img src="assert/image/RoleManagement.png" alt="role management"
+              style="margin-right:5px"></span> Role Management</a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="content">
+      <!-- Filters / Toolbar -->
+      <section class="panel">
+        <div class="panel-head">
+          <h3>Question Management</h3>
+        </div>
+        <form class="filters" action="#" onsubmit="return false;">
+          <div class="field">
+                        <label for="q">Name</label>
+                        <input id="q" class="input" type="text" placeholder="Enter role name to search" />
+                    </div>
+          <div class="field">
+            <label for="type">Type</label>
+            <select id="type" class="input">
+              <option value="">Select item</option>
+              <option>SingleChoice</option>
+              <option>MultipleChoice</option>
+              <option>True/False</option>
+            </select>
+          </div>
+          <div class="field field-inline">
+            <label>Status</label>
+            <label class="check"><input type="checkbox" style="scale:1.5" /> Active</label>
+          </div>
+          <div class="actions-bar">
+            <div class="left">
+              <button type="button" class="btn primary">
+                <span class="icon plus" aria-hidden="true"><img src="assert/image/add.png" alt="add"
+                    style="height:16px;width:16px"></span>
+                Create
+              </button>
+            </div>
+            <div class="right">
+              <button type="reset" class="btn ghost">
+                <span class="icon reset" aria-hidden="true" style="margin-right:6px"><img src="assert/image/clear.png"
+                    alt="clear" style="height:16px;width:16px"></span>
+                Clear
+              </button>
+              <button type="submit" class="btn primary">
+                <span class="icon search" aria-hidden="true" style="margin-right:6px"><img src="assert/image/search.png"
+                    alt="search" style="height:16px;width:16px"></span>
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- Question list table -->
+      <section class="panel">
+        <div class="panel-head">
+          <h4>Question List</h4>
+        </div>
+        <div class="table-scroll">
+          <table class="table" aria-label="Question list">
+            <thead>
+              <tr>
+                <th>Content</th>
+                <th>Type</th>
+                <th>Answers</th>
+                <th>Status</th>
+                <th style="width:96px">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Who is the inventor of the airplane?</td>
+                <td>MultipleChoice</td>
+                <td>4</td>
+                <td>Yes</td>
+                <td class="actions">
+                  <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png" alt="edit"
+                      class="act-ico blue"></a>
+                  <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png" alt="delete"
+                      class="act-ico red"></a>
+                </td>
+              </tr>
+              <tr>
+                <td>What is the capital of France?</td>
+                <td>SingleChoice</td>
+                <td>4</td>
+                <td>Yes</td>
+                <td class="actions">
+                  <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png" alt="edit"
+                      class="act-ico blue"></a>
+                  <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png" alt="delete"
+                      class="act-ico red"></a>
+                </td>
+              </tr>
+              <tr>
+                <td>Where is Viet Nam?</td>
+                <td>MultipleChoice</td>
+                <td>4</td>
+                <td>Yes</td>
+                <td class="actions">
+                  <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png" alt="edit"
+                      class="act-ico blue"></a>
+                  <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png" alt="delete"
+                      class="act-ico red"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table-foot">
+          <label class="pager-size">Items per page:
+            <select>
+              <option>10</option>
+              <option>20</option>
+              <option>50</option>
+            </select>
+          </label>
+          <div class="pagination" role="navigation" aria-label="Pagination">
+            <button class="page-btn" title="First" aria-label="First">«</button>
+            <button class="page-btn" title="Prev" aria-label="Previous">‹</button>
+            <button class="page-btn is-current" aria-current="page">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn" title="Next" aria-label="Next">›</button>
+            <button class="page-btn" title="Last" aria-label="Last">»</button>
+          </div>
+          <div class="summary">1–10 of 32</div>
+        </div>
+      </section>
+
+      <!-- Add Question form -->
+      <section class="panel add-question">
+        <div class="panel-head">
+          <h4>Add Question</h4>
+        </div>
+
+        <form class="form two-col" action="#" onsubmit="return false;">
+          <div class="field">
+            <label for="content">Content</label>
+            <textarea id="content" class="input textarea" rows="3" placeholder="Enter question content"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="qtype2">Question Type</label>
+            <select id="qtype2" class="input" style="margin-bottom: 40px;">
+              <option value="">Select Question Type</option>
+              <option>SingleChoice</option>
+              <option>MultipleChoice</option>
+              <option>True/False</option>
+            </select>
+          </div>
+
+          <!-- Status: một hàng riêng bên dưới 2 cột -->
+          <div class="field status">
+            <label>Status</label>
+            <label class="check"><input type="checkbox" style="scale: 1.5;" /> Active</label>
+          </div>
+        </form>
+
+        <!-- Thanh nút dưới cùng -->
+        <div class="form-actions between addq-actions">
+          <button class="btn primary" type="button">
+            <span class="icon plus" aria-hidden="true" style="margin-right:6px">
+              <img src="assert/image/add.png" alt="add" style="height:16px;width:16px">
+            </span>
+            Show Answers
+          </button>
+          <div>
+            <button class="btn ghost" type="button"> <span class="icon reset" aria-hidden="true"
+                style="margin-right: 6px;"><img src="assert/image/clear.png" alt="clear"
+                  style="height: 16px; width: 16px;"></span> Cancel</button>
+            <button class="btn primary" type="submit"> <span class="icon save" aria-hidden="true"
+                style="margin-right: 6px;"><img src="assert/image/save.png" alt="save"
+                  style="height: 16px; width: 16px;"></span> Save</button>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Answer List -->
+      <section class="panel">
+        <div class="panel-head">
+          <h4>Answer List</h4>
+          <button class="btn primary small" type="button" style="margin-left:auto">
+            <span class="icon plus" aria-hidden="true" style="margin-right:6px"><img src="assert/image/add.png"
+                alt="add" style="height:16px;width:16px"></span>
+            Add
+          </button>
+        </div>
+        <div class="table-scroll">
+          <table class="table" aria-label="Answer list">
+            <thead>
+              <tr>
+                <th>Content</th>
+                <th>Is Correct</th>
+                <th>Status</th>
+                <th style="width:96px">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Wright brothers</td>
+                <td>True</td>
+                <td>Yes</td>
+                <td class="actions">
+                  <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png" alt="edit"
+                      class="act-ico blue"></a>
+                  <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png" alt="delete"
+                      class="act-ico red"></a>
+                </td>
+              </tr>
+              <tr>
+                <td>Alexander Graham Bell</td>
+                <td>False</td>
+                <td>Yes</td>
+                <td class="actions">
+                  <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png" alt="edit"
+                      class="act-ico blue"></a>
+                  <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png" alt="delete"
+                      class="act-ico red"></a>
+                </td>
+              </tr>
+              <tr>
+                <td>Albert Einstein</td>
+                <td>False</td>
+                <td>Yes</td>
+                <td class="actions">
+                  <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png" alt="edit"
+                      class="act-ico blue"></a>
+                  <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png" alt="delete"
+                      class="act-ico red"></a>
+                </td>
+              </tr>
+              <tr>
+                <td>Charles Babbage</td>
+                <td>False</td>
+                <td>Cell</td>
+                <td class="actions">
+                  <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png" alt="edit"
+                      class="act-ico blue"></a>
+                  <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png" alt="delete"
+                      class="act-ico red"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Add Answer -->
+      <section class="panel">
+        <div class="panel-head">
+          <h4>Add Answer</h4>
+        </div>
+        <form class="form two-col" action="#" onsubmit="return false;">
+          <div class="field" style="grid-column:1 / -1">
+            <label for="adesc">Description</label>
+            <input id="adesc" class="input" type="text" placeholder="Enter your email" />
+          </div>
+          <div class="field field-inline">
+            <label>Is Correct?</label>
+            <label class="check"><input type="checkbox" style="scale: 1.5;" /> Active</label>
+          </div>
+          <div class="field field-inline">
+            <label>Status</label>
+            <label class="check"><input type="checkbox" style="scale: 1.5;" /> Active</label>
+          </div>
+        </form>
+        <div class="form-actions">
+          <button class="btn ghost" type="button"> <span class="icon reset" aria-hidden="true"
+              style="margin-right: 6px;"><img src="assert/image/clear.png" alt="clear"
+                style="height: 16px; width: 16px;"></span> Cancel</button>
+          <button class="btn primary" type="submit"> <span class="icon save" aria-hidden="true"
+              style="margin-right: 6px;"><img src="assert/image/save.png" alt="save"
+                style="height: 16px; width: 16px;"></span> Save</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer id="about">
+    <div class="container foot-grid">
+      <div>
+        <div class="brand-sm">
+          <span class="logo" aria-hidden="true">
+            <img src="assert/image/logo.png" alt="logo image">
+          </span>
+          Quizzes
+        </div>
+
+        <p class="muted" style="margin:20px 0 0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea,
+          saepe assumenda?
+        </p>
+      </div>
+
+      <div>
+        <h4 style="margin:0 0 8px">Menu</h4>
+        <div class="list">
+          <a href="#home" style="color: deepskyblue;">Home</a>
+          <a href="#quizzes" style="color: deepskyblue;">Quizzes</a>
+          <a href="#about" style="color: deepskyblue;">About</a>
+          <a href="#contact" style="color: deepskyblue;">Contact</a>
+        </div>
+      </div>
+
+      <div id="contact">
+        <h4 style="margin:0 0 8px">Contact</h4>
+        <div class="list muted">
+          <div> <img src="assert/image/email.png" alt="email"> <a href="#" style="color:deepskyblue; margin: 5px;">
+              Congdinh2021@gmail.com</a></div>
+          <div> <img src="assert/image/phone.png" alt="phone number"> <a href="#"
+              style="color:deepskyblue; margin: 5px;"> +84 944 551 356</a></div>
+          <div> <img src="assert/image/location.png" alt="address"> <a href="#" style="color:deepskyblue; margin: 5px;">
+              123 Xuan Dinh, Bac Tu Liem, Ha Noi, Viet Nam</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container">© <span id="y">2025</span> • Built as a single‑file HTML demo.</div>
+    </div>
+  </footer>
+</body>
+
+</html>

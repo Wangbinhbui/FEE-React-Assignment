@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Role Management • Quizzes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- style chung -->
+    <link rel="stylesheet" href="assert/css/homepage.css">
+    <!-- style riêng: copy format như quiz-management.css -->
+    <link rel="stylesheet" href="assert/css/role-management.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav">
+            <div class="brand" aria-label="Quizzes home">
+                <span class="logo" aria-hidden="true"><img src="assert/image/logo.png" alt="logo image"></span>
+                Quizzes
+            </div>
+            <nav class="navlinks" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="index.html#quizzes">Quizzes</a>
+                <a href="#">Management</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="auth">
+                <a class="btn ghost" href="#login">Login</a>
+                <a class="btn primary" href="#register">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin layout -->
+    <div class="container admin">
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Management menu">
+            <div class="sidebar-title">Menu</div>
+            <nav class="menu">
+                <a href="quiz-management.html"><span class="mi"><img src="assert/image/QuizManagement.png" alt=""
+                            style="margin-right:5px"></span> Quiz Management</a>
+                <a href="question-management.html"><span class="mi"><img src="assert/image/QuestionManagement.png"
+                            alt="" style="margin-right:5px"></span> Question Management</a>
+                <a href="user-management.html"><span class="mi"><img src="assert/image/UserManagement.png" alt=""
+                            style="margin-right:5px"></span> User Management</a>
+                <a class="active" href="role-management.html"><span class="mi"><img
+                            src="assert/image/RoleManagement.png" alt="" style="margin-right:5px"></span> Role
+                    Management</a>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <main class="content">
+
+            <!-- Filters / Toolbar -->
+            <section class="panel">
+                <div class="panel-head">
+                    <h3>Role Management</h3>
+                </div>
+                <form class="filters" action="#" onsubmit="return false;">
+                    <div class="field">
+                        <label for="q">Name</label>
+                        <input id="q" class="input" type="text" placeholder="Enter role name to search" />
+                    </div>
+                    <div class="field field-inline">
+                        <label>Status</label>
+                        <label class="check"><input type="checkbox" style="scale:1.5" /> Active</label>
+                    </div>
+
+                    <div class="actions-bar">
+                        <div class="left">
+                            <button type="button" class="btn primary">
+                                <span class="icon plus" aria-hidden="true">
+                                    <img src="assert/image/add.png" alt="add" style="height:16px;width:16px">
+                                </span>
+                                Create
+                            </button>
+                        </div>
+                        <div class="right">
+                            <button type="reset" class="btn ghost">
+                                <span class="icon reset" aria-hidden="true" style="margin-right:6px">
+                                    <img src="assert/image/clear.png" alt="clear" style="height:16px;width:16px">
+                                </span>
+                                Clear
+                            </button>
+                            <button type="submit" class="btn primary">
+                                <span class="icon search" aria-hidden="true" style="margin-right:6px">
+                                    <img src="assert/image/search.png" alt="search" style="height:16px;width:16px">
+                                </span>
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Role list table -->
+            <section class="panel">
+                <div class="panel-head">
+                    <h4>Role List</h4>
+                </div>
+                <div class="table-scroll">
+                    <table class="table" aria-label="Role list">
+                        <thead>
+                            <tr>
+                                <th>Role Name</th>
+                                <th>Description</th>
+                                <th>Users</th>
+                                <th>Status</th>
+                                <th style="width:96px">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Admin</td>
+                                <td>Full access to manage quizzes, users and roles</td>
+                                <td>4</td>
+                                <td>Yes</td>
+                                <td class="actions">
+                                    <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png"
+                                            alt="edit" class="act-ico blue"></a>
+                                    <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png"
+                                            alt="delete" class="act-ico red"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Editor</td>
+                                <td>Create & update quizzes and questions</td>
+                                <td>7</td>
+                                <td>Yes</td>
+                                <td class="actions">
+                                    <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png"
+                                            alt="edit" class="act-ico blue"></a>
+                                    <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png"
+                                            alt="delete" class="act-ico red"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Viewer</td>
+                                <td>Read-only access</td>
+                                <td>12</td>
+                                <td>Yes</td>
+                                <td class="actions">
+                                    <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png"
+                                            alt="edit" class="act-ico blue"></a>
+                                    <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png"
+                                            alt="delete" class="act-ico red"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-foot">
+                    <label class="pager-size">Items per page:
+                        <select>
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                        </select>
+                    </label>
+                    <div class="pagination" role="navigation" aria-label="Pagination">
+                        <button class="page-btn" title="First" aria-label="First">«</button>
+                        <button class="page-btn" title="Prev" aria-label="Previous">‹</button>
+                        <button class="page-btn is-current" aria-current="page">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn" title="Next" aria-label="Next">›</button>
+                        <button class="page-btn" title="Last" aria-label="Last">»</button>
+                    </div>
+                    <div class="summary">1–10 of 32</div>
+                </div>
+            </section>
+
+            <!-- Add Role -->
+            <section class="panel add-role">
+                <div class="panel-head">
+                    <h4>Add Role</h4>
+                </div>
+
+                <form class="form two-col" action="#" onsubmit="return false;">
+                    <!-- Cột trái -->
+                    <div class="field">
+                        <label for="rname" style="height: fit-content;">Name</label>
+                        <input id="rname" class="input" type="text" placeholder="Enter role name" style="margin-top: auto;margin-bottom: 90px;"/>
+                    </div>
+                    <div class="field">
+                        <label for="rdesc">Description</label>
+                        <textarea id="rdesc" class="input textarea" rows="3" placeholder="Enter your description" style="margin-bottom: 35px; padding-bottom: 20;"></textarea>
+                    </div>
+
+                    <div class="field status" >
+                        <label>Status</label>
+                        <label class="check"><input type="checkbox" style="scale: 1.5;" /> Active</label>
+                    </div>
+                </form>
+
+                <div class="form-actions add-role-actions">
+                    <button class="btn ghost" type="button">
+                        <span class="icon reset" aria-hidden="true" style="margin-right:6px">
+                            <img src="assert/image/clear.png" alt="clear" style="height:16px;width:16px">
+                        </span>
+                        Cancel
+                    </button>
+                    <button class="btn primary" type="submit">
+                        <span class="icon save" aria-hidden="true" style="margin-right:6px">
+                            <img src="assert/image/save.png" alt="save" style="height:16px;width:16px">
+                        </span>
+                        Save
+                    </button>
+                </div>
+            </section>
+
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="container foot-grid">
+            <div>
+                <div class="brand-sm">
+                    <span class="logo" aria-hidden="true"><img src="assert/image/logo.png" alt="logo image"></span>
+                    Quizzes
+                </div>
+                <p class="muted" style="margin:20px 0 0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                    saepe assumenda?</p>
+            </div>
+            <div>
+                <h4 style="margin:0 0 8px">Menu</h4>
+                <div class="list">
+                    <a href="#home" style="color:deepskyblue;">Home</a>
+                    <a href="#quizzes" style="color:deepskyblue;">Quizzes</a>
+                    <a href="#about" style="color:deepskyblue;">About</a>
+                    <a href="#contact" style="color:deepskyblue;">Contact</a>
+                </div>
+            </div>
+            <div id="contact">
+                <h4 style="margin:0 0 8px">Contact</h4>
+                <div class="list muted">
+                    <div><img src="assert/image/email.png" alt=""> <a href="#"
+                            style="color:deepskyblue;margin:5px;">congdinh2021@gmail.com</a></div>
+                    <div><img src="assert/image/phone.png" alt=""> <a href="#" style="color:deepskyblue;margin:5px;">+84
+                            944 551 356</a></div>
+                    <div><img src="assert/image/location.png" alt=""> <a href="#"
+                            style="color:deepskyblue;margin:5px;">123 Xuan Dinh, Bac Tu Liem, Ha Noi, Viet Nam</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">© <span id="y">2025</span> • Built as a single-file HTML demo.</div>
+        </div>
+    </footer>
+</body>
+
+</html>
