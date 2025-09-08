@@ -1,3 +1,9 @@
+/* Add shadow on panel when active (clicked/focused) */
+.panel:active,
+.panel:focus-within {
+  box-shadow: 0 4px 24px 0 rgba(37, 99, 235, 0.18), 0 1.5px 6px 0 rgba(0,0,0,0.08);
+  border-color: #2563eb;
+}
 /* Layout */
 .admin {
   display: grid;
@@ -15,6 +21,7 @@
   top: 72px;
   align-self: start
 }
+  /* hiệu ứng đổ bóng */
 
 .sidebar-title {
   font-weight: 800;
@@ -41,11 +48,7 @@
   border-color: var(--line)
 }
 
-.menu a.active {
-  background: #eef2ff;
-  border-color: #c7d2fe;
-  color: #1d4ed8
-}
+
 
 .mi {
   width: 20px;

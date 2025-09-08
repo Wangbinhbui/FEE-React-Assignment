@@ -26,14 +26,14 @@
       </div>
       <nav class="navlinks" aria-label="Primary">
         <a href="index.html">Home</a>
-        <a href="index.html#quizzes">Quizzes</a>
-        <a href="#">Management</a>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="quiz-management.html">Management</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
       <div class="auth">
-        <a class="btn ghost" href="#login">Login</a>
-        <a class="btn primary" href="#register">Register</a>
+        <a class="btn ghost" href="login.html">Login</a>
+        <a class="btn primary" href="register.html">Register</a>
       </div>
     </div>
   </header>
@@ -44,18 +44,16 @@
     <aside class="sidebar" aria-label="Management menu">
       <div class="sidebar-title">Menu</div>
       <nav class="menu">
-        <a href="quiz-management.html"><span class="mi"><img src="assert/image/QuizManagement.png" alt="quiz management"
-              style="margin-right:5px"></span> Quiz Management</a>
-        <a class="active" href="question-management.html"><span class="mi"><img
-              src="assert/image/QuestionManagement.png" alt="question management" style="margin-right:5px"></span>
-          Question Management</a>
+        <a class="active" href="quiz-management.html"><span class="mi"><img src="assert/image/QuizManagement.png"
+              alt="quiz management" style="margin-right:5px"></span> Quiz Management</a>
+        <a href="question-management.html"><span class="mi"><img src="assert/image/QuestionManagement.png"
+              alt="question management" style="margin-right:5px"></span> Question Management</a>
         <a href="user-management.html"><span class="mi"><img src="assert/image/UserManagement.png" alt="user management"
               style="margin-right:5px"></span> User Management</a>
-        <a href="#"><span class="mi"><img src="assert/image/RoleManagement.png" alt="role management"
+        <a href="role-management.html"><span class="mi"><img src="assert/image/RoleManagement.png" alt="role management"
               style="margin-right:5px"></span> Role Management</a>
       </nav>
     </aside>
-
     <!-- Main content -->
     <main class="content">
       <!-- Filters / Toolbar -->
@@ -65,9 +63,9 @@
         </div>
         <form class="filters" action="#" onsubmit="return false;">
           <div class="field">
-                        <label for="q">Name</label>
-                        <input id="q" class="input" type="text" placeholder="Enter role name to search" />
-                    </div>
+            <label for="q">Name</label>
+            <input id="q" class="input" type="text" placeholder="Enter role name to search" />
+          </div>
           <div class="field">
             <label for="type">Type</label>
             <select id="type" class="input">

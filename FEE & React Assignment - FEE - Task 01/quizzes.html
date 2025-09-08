@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quizzes • Quiz App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assert/css/homepage.css">
+    <link rel="stylesheet" href="assert/css/quizzes.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav">
+            <div class="brand" aria-label="Quizzes home">
+                <span class="logo" aria-hidden="true">
+                    <img src="assert/image/logo.png" alt="logo">
+                </span>
+                Quizzes
+            </div>
+            <nav class="navlinks" aria-label="Primary">
+                <a href="homepage.html">Home</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="quiz-management.html">Management</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="auth">
+                <a class="btn ghost" href="login.html">Login</a>
+                <a class="btn primary" href="register.html">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="quiz-search">
+            <h1 class="page-title">Take a Quiz</h1>
+            <form class="searchbar" action="#" onsubmit="return false;">
+                <input class="input search-input" type="text" placeholder="Enter quiz code to take a quiz"/>
+                <button class="btn primary search-btn" type="submit">Take Quiz</button>
+            </form>
+        </section>
+
+        <section class="quizzes-list">
+            <h2 class="section-title">QUIZZES</h2>
+
+            <div class="quiz-grid">
+                <!-- Card 1 -->
+                <article class="quiz-card">
+                    <div class="q-thumb">
+                        <img src="assert/image/capitals..png" alt="Capitals of Country">
+                    </div>
+                    <div class="q-body">
+                        <div class="q-head">
+                            <h3>Capitals of Country</h3>
+                            <span class="q-meta">15m</span>
+                        </div>
+                        <p class="q-desc">Test your knowledge of country capitals</p>
+                        <a class="btn primary btn-fullwidth" href="#">Start</a>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="quiz-card">
+                    <div class="q-thumb">
+                        <img src="assert/image/capitals. (1).png" alt="Capitals of Country">
+                    </div>
+                    <div class="q-body">
+                        <div class="q-head">
+                            <h3>Capitals of Country</h3>
+                            <span class="q-meta">15m</span>
+                        </div>
+                        <p class="q-desc">Test your knowledge of country capitals</p>
+                        <a class="btn primary btn-fullwidth" href="#">Start</a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="quiz-card">
+                    <div class="q-thumb">
+                        <img src="assert/image/capitals. (2).png" alt="Capitals of Country">
+                    </div>
+                    <div class="q-body">
+                        <div class="q-head">
+                            <h3>Capitals of Country</h3>
+                            <span class="q-meta">15m</span>
+                        </div>
+                        <p class="q-desc">Test your knowledge of country capitals</p>
+                        <a class="btn primary btn-fullwidth" href="#">Start</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="container foot-grid">
+            <div>
+                <div class="brand-sm">
+                    <span class="logo" aria-hidden="true">
+                        <img src="assert/image/logo.png" alt="logo">
+                    </span>
+                    Quizzes
+                </div>
+                <p class="muted" style="margin:20px 0 0">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                </p>
+            </div>
+
+            <div>
+                <h4 style="margin:0 0 8px">Menu</h4>
+                <div class="list">
+                    <a href="homepage.html" style="color: deepskyblue;">Home</a>
+                    <a href="quizzes.html" style="color: deepskyblue;">Quizzes</a>
+                    <a href="about.html" style="color: deepskyblue;">About</a>
+                    <a href="contact.html" style="color: deepskyblue;">Contact</a>
+                </div>
+            </div>
+
+            <div id="contact">
+                <h4 style="margin:0 0 8px">Contact</h4>
+                <div class="list muted">
+                    <div><img src="assert/image/email.png" alt="email"> <a href="#"
+                            style="color:deepskyblue; margin-left:6px;">congdinh2021@gmail.com</a></div>
+                    <div><img src="assert/image/phone.png" alt="phone"> <a href="#"
+                            style="color:deepskyblue; margin-left:6px;">+84 944 551 356</a></div>
+                    <div><img src="assert/image/location.png" alt="address"> <a href="#"
+                            style="color:deepskyblue; margin-left:6px;">123 Xuan Dinh, Bac Tu Liem, Ha Noi, Viet Nam</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">© <span id="y">2025</span> • ReactJS 19</div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

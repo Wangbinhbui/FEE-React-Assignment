@@ -49,11 +49,7 @@
     border-color: var(--line)
 }
 
-.menu a.active {
-    background: #eef2ff;
-    border-color: #c7d2fe;
-    color: #1d4ed8
-}
+
 
 .mi {
     width: 20px;
