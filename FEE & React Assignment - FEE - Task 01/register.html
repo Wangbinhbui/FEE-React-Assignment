@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register • Quizzes</title>
+  <link rel="stylesheet" href="assert/css/auth.css">
+</head>
+<body>
+  <main class="auth">
+    <!-- SAME background as 403 -->
+    <img class="auth__bg" src="assert/image/background.png" alt="" aria-hidden="true">
+
+    <section class="card" aria-labelledby="register-title">
+      <h1 id="register-title">Register</h1>
+
+      <form class="form" action="#" method="post">
+        <div class="grid-2" >
+          <div class="field" style="g;">
+            <label class="label" for="first-name">First Name</label>
+            <input id="first-name" class="input" type="text" name="firstName" placeholder="Enter your first name" required style="width: 250px;">
+          </div>
+          <div class="field">
+            <label class="label" for="last-name">Last Name</label>
+            <input id="last-name" class="input" type="text" name="lastName" placeholder="Enter your last name" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="email">Email Address</label>
+          <input id="email" class="input" type="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label class="label" for="reg-username">Username</label>
+            <input id="reg-username" class="input" type="text" name="username" placeholder="Enter your username" required style="width: 250px;">
+          </div>
+          <div class="field">
+            <label class="label" for="phone">Phone Number</label>
+            <input id="phone" class="input" type="tel" name="phone" placeholder="Enter your phone number">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="reg-password">Password</label>
+          <input id="reg-password" class="input" type="password" name="password" placeholder="Enter your password" required>
+        </div>
+
+        <div class="field">
+          <label class="label" for="confirm">Confirm Password</label>
+          <input id="confirm" class="input" type="password" name="confirmPassword" placeholder="Confirm your password" required>
+        </div>
+
+        <div class="actions">
+          <a class="btn ghost" href="index.html">Back to Home</a>
+          <button class="btn primary" type="submit">Login</button>
+        </div>
+      </form>
+
+      <div class="meta">Already have an account? <a href="login.html">Login</a></div>
+    </section>
+  </main>
+</body>
+</html>
