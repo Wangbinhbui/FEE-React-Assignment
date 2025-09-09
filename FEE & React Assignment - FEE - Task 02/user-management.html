@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Management • Quizzes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assert/css/homepage.css">
+    <link rel="stylesheet" href="assert/css/user-management.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav">
+            <div class="brand" aria-label="Quizzes home">
+                <span class="logo" aria-hidden="true">
+                    <img src="assert/image/logo.png" alt="logo image">
+                </span>
+                Quizzes
+            </div>
+            <nav class="navlinks" aria-label="Primary">
+                <a href="homepage.html">Home</a>
+                <a href="quizzes.html">Quizzes</a>
+                <a href="quiz-management.html">Management</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="auth">
+                <a class="btn ghost" href="login.html">Login</a>
+                <a class="btn primary" href="register.html">Register</a>
+            </div>
+        </div>
+    </header>
+    <!-- Admin layout -->
+    <div class="container admin">
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Management menu">
+            <div class="sidebar-title">Menu</div>
+            <nav class="menu">
+                <a class="active" href="quiz-management.html"><span class="mi"><img
+                            src="assert/image/QuizManagement.png" alt="quiz management" style="margin-right:5px"></span>
+                    Quiz Management</a>
+                <a href="question-management.html"><span class="mi"><img src="assert/image/QuestionManagement.png"
+                            alt="question management" style="margin-right:5px"></span> Question Management</a>
+                <a href="user-management.html"><span class="mi"><img src="assert/image/UserManagement.png"
+                            alt="user management" style="margin-right:5px"></span> User Management</a>
+                <a href="role-management.html"><span class="mi"><img src="assert/image/RoleManagement.png"
+                            alt="role management" style="margin-right:5px"></span> Role Management</a>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <main class="content">
+            <!-- Filters / Toolbar -->
+            <section class="panel">
+                <div class="panel-head">
+                    <h3>User Management</h3>
+                </div>
+                <form class="filters" action="#" onsubmit="return false;">
+                    <div class="field">
+                        <label for="q">Name</label>
+                        <input id="q" class="input" type="text" placeholder="Enter username to search" />
+                    </div>
+                    <div class="field field-inline">
+                        <label>Status</label>
+                        <label class="check"><input type="checkbox" style="scale: 1.5;" /> Active</label>
+                    </div>
+
+                    <div class="actions-bar">
+                        <div class="left">
+                            <button type="button" class="btn primary">
+                                <span class="icon plus" aria-hidden="true"><img src="assert/image/add.png" alt="add new"
+                                        style="height: 16px; width: 16px"></span> Create
+                            </button>
+                        </div>
+                        <div class="right">
+                            <button type="reset" class="btn ghost">
+                                <span class="icon reset" aria-hidden="true" style="margin-right: 6px;"><img
+                                        src="assert/image/clear.png" alt="clear"
+                                        style="height: 16px; width: 16px;"></span> Clear
+                            </button>
+                            <button type="submit" class="btn primary">
+                                <span class="icon search" aria-hidden="true" style="margin-right: 6px;"><img
+                                        src="assert/image/search.png" alt="search"
+                                        style="height: 16px; width: 16px;"></span> Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <!-- User list table -->
+            <section class="panel">
+                <div class="panel-head">
+                    <h4>User List</h4>
+                </div>
+                <div class="table-scroll">
+                    <table class="table" aria-label="User list">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>User Name</th>
+                                <th>Phone Number</th>
+                                <th>Status</th>
+                                <th style="width:96px">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Admin</td>
+                                <td>User</td>
+                                <td>admin@domain.com</td>
+                                <td>admin</td>
+                                <td>+84987654321</td>
+                                <td>Yes</td>
+                                <td class="actions">
+                                    <a href="#" title="Edit" aria-label="Edit">
+                                        <img src="assert/image/edit.png" alt="edit"
+                                            style="width:24px;height:24px;object-fit:contain;filter:drop-shadow(0 0 0 deepskyblue) brightness(0) saturate(100%) invert(48%) sepia(99%) saturate(7499%) hue-rotate(176deg) brightness(102%) contrast(101%);" />
+                                    </a>
+                                    <a href="#" title="Delete" aria-label="Delete">
+                                        <img src="assert/image/delete.png" alt="delete"
+                                            style="width:24px;height:24px;object-fit:contain;filter:drop-shadow(0 0 0 red) brightness(0) saturate(100%) invert(16%) sepia(99%) saturate(7499%) hue-rotate(-10deg) brightness(102%) contrast(101%);" />
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Editor</td>
+                                <td>User</td>
+                                <td>editor@domain.com</td>
+                                <td>editor</td>
+                                <td>+84987654321</td>
+                                <td>Yes</td>
+                                <td class="actions">
+                                    <a href="#" title="Edit" aria-label="Edit">
+                                        <img src="assert/image/edit.png" alt="edit"
+                                            style="width:24px;height:24px;object-fit:contain;filter:drop-shadow(0 0 0 deepskyblue) brightness(0) saturate(100%) invert(48%) sepia(99%) saturate(7499%) hue-rotate(176deg) brightness(102%) contrast(101%);" />
+                                    </a>
+                                    <a href="#" title="Delete" aria-label="Delete">
+                                        <img src="assert/image/delete.png" alt="delete"
+                                            style="width:24px;height:24px;object-fit:contain;filter:drop-shadow(0 0 0 red) brightness(0) saturate(100%) invert(16%) sepia(99%) saturate(7499%) hue-rotate(-10deg) brightness(102%) contrast(101%);" />
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cong</td>
+                                <td>Dinh</td>
+                                <td>congdinh@domain.com</td>
+                                <td>congdinh</td>
+                                <td>+84987654321</td>
+                                <td>Yes</td>
+                                <td class="actions">
+                                    <a href="#" title="Edit" aria-label="Edit">
+                                        <img src="assert/image/edit.png" alt="edit"
+                                            style="width:24px;height:24px;object-fit:contain;filter:drop-shadow(0 0 0 deepskyblue) brightness(0) saturate(100%) invert(48%) sepia(99%) saturate(7499%) hue-rotate(176deg) brightness(102%) contrast(101%);" />
+                                    </a>
+                                    <a href="#" title="Delete" aria-label="Delete">
+                                        <img src="assert/image/delete.png" alt="delete"
+                                            style="width:24px;height:24px;object-fit:contain;filter:drop-shadow(0 0 0 red) brightness(0) saturate(100%) invert(16%) sepia(99%) saturate(7499%) hue-rotate(-10deg) brightness(102%) contrast(101%);" />
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Van</td>
+                                <td>Nguyen</td>
+                                <td>vannguyen@domain.com</td>
+                                <td>vannguyen</td>
+                                <td>+84987654321</td>
+                                <td>Yes</td>
+                                <td class="actions">
+                                    <a href="#" title="Edit" aria-label="Edit">
+                                        <img src="assert/image/edit.png" alt="edit"
+                                            style="width:24px;height:24px;object-fit:contain;filter:drop-shadow(0 0 0 deepskyblue) brightness(0) saturate(100%) invert(48%) sepia(99%) saturate(7499%) hue-rotate(176deg) brightness(102%) contrast(101%);" />
+                                    </a>
+                                    <a href="#" title="Delete" aria-label="Delete">
+                                        <img src="assert/image/delete.png" alt="delete"
+                                            style="width:24px;height:24px;object-fit:contain;filter:drop-shadow(0 0 0 red) brightness(0) saturate(100%) invert(16%) sepia(99%) saturate(7499%) hue-rotate(-10deg) brightness(102%) contrast(101%);" />
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-foot">
+                    <label class="pager-size">Items per page:
+                        <select>
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                        </select>
+                    </label>
+                    <div class="pagination" role="navigation" aria-label="Pagination">
+                        <button class="page-btn" title="First" aria-label="First">«</button>
+                        <button class="page-btn" title="Prev" aria-label="Previous">‹</button>
+                        <button class="page-btn is-current" aria-current="page">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn" title="Next" aria-label="Next">›</button>
+                        <button class="page-btn" title="Last" aria-label="Last">»</button>
+                    </div>
+                    <div class="summary">1–10 of 32</div>
+                </div>
+            </section>
+
+            <!-- Add user form -->
+            <section class="panel">
+                <div class="panel-head">
+                    <h4>Add User</h4>
+                </div>
+                <form class="form two-col" action="#" onsubmit="return false;">
+                    <div class="field">
+                        <label for="firstName">First Name</label>
+                        <input id="firstName" class="input" type="text" placeholder="Enter your first name" />
+                    </div>
+                    <div class="field">
+                        <label for="lastName">Last Name</label>
+                        <input id="lastName" class="input" type="text" placeholder="Enter your last name" />
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" class="input" type="email" placeholder="Enter your email" />
+                    </div>
+                    <div class="field">
+                        <label for="username">User Name</label>
+                        <input id="username" class="input" type="text" placeholder="Enter your user name" />
+                    </div>
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input id="password" class="input" type="password" placeholder="Enter your password" />
+                    </div>
+                    <div class="field">
+                        <label for="confirm">Confirm Password</label>
+                        <input id="confirm" class="input" type="password" placeholder="Confirm your password" />
+                    </div>
+                    <div class="field">
+                        <label for="dob">Date of Birth</label>
+                        <input id="dob" class="input" type="date" />
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" class="input" type="tel" placeholder="Enter your phone number" />
+                    </div>
+                    <div class="field field-inline">
+                        <label>Status</label>
+                        <label class="check"><input type="checkbox" style="scale: 1.5;" /> Active</label>
+                    </div>
+                </form>
+                <div class="form-actions">
+                    <button class="btn ghost" type="button"> <span class="icon reset" aria-hidden="true"
+                            style="margin-right: 6px;"><img src="assert/image/clear.png" alt="clear"
+                                style="height: 16px; width: 16px;"></span> Cancel</button>
+                    <button class="btn primary" type="submit"> <span class="icon save" aria-hidden="true"
+                            style="margin-right: 6px;"><img src="assert/image/save.png" alt="save"
+                                style="height: 16px; width: 16px;"></span> Save</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="container foot-grid">
+            <div>
+                <div class="brand-sm">
+                    <span class="logo" aria-hidden="true">
+                        <img src="assert/image/logo.png" alt="logo image">
+                    </span>
+                    Quizzes
+                </div>
+
+                <p class="muted" style="margin:20px 0 0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea,
+                    saepe assumenda?
+                </p>
+            </div>
+
+            <div>
+                <h4 style="margin:0 0 8px">Menu</h4>
+                <div class="list">
+                    <a href="#home" style="color: deepskyblue;">Home</a>
+                    <a href="#quizzes" style="color: deepskyblue;">Quizzes</a>
+                    <a href="#about" style="color: deepskyblue;">About</a>
+                    <a href="#contact" style="color: deepskyblue;">Contact</a>
+                </div>
+            </div>
+
+            <div id="contact">
+                <h4 style="margin:0 0 8px">Contact</h4>
+                <div class="list muted">
+                    <div> <img src="assert/image/email.png" alt="email"> <a href="#"
+                            style="color:deepskyblue; margin: 5px;"> Congdinh2021@gmail.com</a></div>
+                    <div> <img src="assert/image/phone.png" alt="phone number"> <a href="#"
+                            style="color:deepskyblue; margin: 5px;"> +84 944 551 356</a></div>
+                    <div> <img src="assert/image/location.png" alt="address"> <a href="#"
+                            style="color:deepskyblue; margin: 5px;"> 123 Xuan Dinh, Bac Tu Liem, Ha Noi, Viet Nam</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">© <span id="y">2025</span> • Built as a single‑file HTML demo.</div>
+        </div>
+    </footer>
+</body>
+
+</html>

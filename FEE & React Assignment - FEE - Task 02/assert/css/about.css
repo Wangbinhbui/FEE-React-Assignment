@@ -1,0 +1,68 @@
+/* About page specific styles */
+.about-hero {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: clamp(20px, 4vw, 48px);
+  align-items: center;
+  padding: clamp(20px, 6vw, 48px) 0 clamp(8px, 2vw, 16px);
+}
+
+.about-copy .contact-list {
+  margin-top: 8px
+}
+
+/* Team */
+.team-section {
+  padding: clamp(8px, 2vw, 20px) 0 clamp(40px, 8vw, 80px)
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(14px, 2.4vw, 22px)
+}
+
+@media (max-width: 980px) {
+  .about-hero {
+    grid-template-columns: 1fr
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
+  }
+}
+
+.team-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px -22px rgba(15, 23, 42, .12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px
+}
+
+.avatar {
+  width: 220px;
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 14px;
+  background: #f8fafc;
+  display: grid;
+  place-items: center;
+  margin: 6px auto 12px
+}
+
+.member-info {
+  text-align: center
+}
+
+.member-name {
+  font-weight: 700
+}
+
+.member-role {
+  font-size: 13px
+}

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b96228a9-39ce-4ea5-a858-e41a985675dd" name="Changes" comment="complete quizzes page" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Wangbinhbui&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Wangbinhbui/FEE-React-Assignment.git&quot;,
+    &quot;accountId&quot;: &quot;1db98e4f-51ac-4f20-8181-b4489c445eb9&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="32GsQahiiVaV2AlM6a9Sl8LQ8V8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;FEE-&amp;&amp;-React-Assignment---FEE---Task-01&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/html_practice/FEE &amp; React Assignment/FEE &amp; React Assignment - FEE - Task 01&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b96228a9-39ce-4ea5-a858-e41a985675dd" name="Changes" comment="" />
+      <created>1757058227225</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1757058227225</updated>
+      <workItem from="1757058228429" duration="675000" />
+      <workItem from="1757065611870" duration="554000" />
+      <workItem from="1757146743683" duration="3654000" />
+      <workItem from="1757259005942" duration="93000" />
+      <workItem from="1757305892951" duration="3472000" />
+      <workItem from="1757340896214" duration="29000" />
+      <workItem from="1757341723968" duration="1649000" />
+      <workItem from="1757404699037" duration="16000" />
+    </task>
+    <task id="LOCAL-00001" summary="create assert folder and html homepage">
+      <option name="closed" value="true" />
+      <created>1757058300318</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1757058300318</updated>
+    </task>
+    <task id="LOCAL-00002" summary="complete homepage">
+      <option name="closed" value="true" />
+      <created>1757065641729</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1757065641729</updated>
+    </task>
+    <task id="LOCAL-00003" summary="conctact page">
+      <option name="closed" value="true" />
+      <created>1757148320129</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1757148320129</updated>
+    </task>
+    <task id="LOCAL-00004" summary="complete conctact page">
+      <option name="closed" value="true" />
+      <created>1757151058641</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1757151058641</updated>
+    </task>
+    <task id="LOCAL-00005" summary="complete about page">
+      <option name="closed" value="true" />
+      <created>1757171901202</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1757171901202</updated>
+    </task>
+    <task id="LOCAL-00006" summary="complete management page">
+      <option name="closed" value="true" />
+      <created>1757259032619</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1757259032619</updated>
+    </task>
+    <task id="LOCAL-00007" summary="complete auth and error page">
+      <option name="closed" value="true" />
+      <created>1757305925098</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1757305925098</updated>
+    </task>
+    <task id="LOCAL-00008" summary="complete auth and error page">
+      <option name="closed" value="true" />
+      <created>1757314015143</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1757314015143</updated>
+    </task>
+    <task id="LOCAL-00009" summary="complete quizzes page">
+      <option name="closed" value="true" />
+      <created>1757342904727</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1757342904727</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create assert folder and html homepage" />
+    <MESSAGE value="complete homepage" />
+    <MESSAGE value="conctact page" />
+    <MESSAGE value="complete conctact page" />
+    <MESSAGE value="complete about page" />
+    <MESSAGE value="complete management page" />
+    <MESSAGE value="complete auth and error page" />
+    <MESSAGE value="complete quizzes page" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete quizzes page" />
+  </component>
+</project>
