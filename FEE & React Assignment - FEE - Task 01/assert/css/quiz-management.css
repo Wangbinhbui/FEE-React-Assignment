@@ -6,7 +6,6 @@
     border-radius: 10px;
     display: block;
 }
-/* Layout (tái dùng ý tưởng từ user-management) */
 .admin {
     display: grid;
     grid-template-columns: 240px 1fr;

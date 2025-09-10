@@ -5,375 +5,349 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Question Management • Quizzes</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- style chung của site -->
-  <link rel="stylesheet" href="assert/css/homepage.css">
-  <!-- style riêng cho trang này -->
-  <link rel="stylesheet" href="assert/css/question-management.css">
 </head>
 
-<body>
+<body class="bg-light">
   <!-- Header -->
-  <header>
-    <div class="container nav">
-      <div class="brand" aria-label="Quizzes home">
-        <span class="logo" aria-hidden="true">
-          <img src="assert/image/logo.png" alt="logo image">
-        </span>
-        Quizzes
+  <header class="sticky-top bg-white border-bottom shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center py-2">
+      <div class="fw-bold d-flex align-items-center">
+        <img src="assert/image/logo.png" width="40" height="40" class="me-2" alt="logo"> Quizzes
       </div>
-      <nav class="navlinks" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="quizzes.html">Quizzes</a>
-        <a href="quiz-management.html">Management</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+      <nav class="d-none d-md-flex gap-3">
+        <a href="index.html" class="text-dark text-decoration-none">Home</a>
+        <a href="quizzes.html" class="text-dark text-decoration-none">Quizzes</a>
+        <a href="quiz-management.html" class="text-dark text-decoration-none">Management</a>
+        <a href="about.html" class="text-dark text-decoration-none">About</a>
+        <a href="contact.html" class="text-dark text-decoration-none">Contact</a>
       </nav>
-      <div class="auth">
-        <a class="btn ghost" href="login.html">Login</a>
-        <a class="btn primary" href="register.html">Register</a>
+      <div class="d-flex gap-2">
+        <a class="btn btn-outline-secondary btn-sm" href="login.html">Login</a>
+        <a class="btn btn-primary btn-sm" href="register.html">Register</a>
       </div>
     </div>
   </header>
 
-  <!-- Admin layout -->
-  <div class="container admin">
-    <!-- Sidebar -->
-    <aside class="sidebar" aria-label="Management menu">
-      <div class="sidebar-title">Menu</div>
-      <nav class="menu">
-        <a class="active" href="quiz-management.html"><span class="mi"><img src="assert/image/QuizManagement.png"
-              alt="quiz management" style="margin-right:5px"></span> Quiz Management</a>
-        <a href="question-management.html"><span class="mi"><img src="assert/image/QuestionManagement.png"
-              alt="question management" style="margin-right:5px"></span> Question Management</a>
-        <a href="user-management.html"><span class="mi"><img src="assert/image/UserManagement.png" alt="user management"
-              style="margin-right:5px"></span> User Management</a>
-        <a href="role-management.html"><span class="mi"><img src="assert/image/RoleManagement.png" alt="role management"
-              style="margin-right:5px"></span> Role Management</a>
-      </nav>
-    </aside>
-    <!-- Main content -->
-    <main class="content">
-      <!-- Filters / Toolbar -->
-      <section class="panel">
-        <div class="panel-head">
-          <h3>Question Management</h3>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <aside class="col-md-3 col-lg-2 bg-white border-end min-vh-100 p-3">
+        <h6 class="fw-bold mb-3">Menu</h6>
+        <nav class="nav flex-column">
+          <a class="nav-link text-dark fw-bold active" href="quiz-management.html">
+            <img src="assert/image/QuizManagement.png" width="20" class="me-2"> Quiz Management
+          </a>
+          <a class="nav-link text-dark" href="question-management.html">
+            <img src="assert/image/QuestionManagement.png" width="20" class="me-2"> Question Management
+          </a>
+          <a class="nav-link text-dark" href="user-management.html">
+            <img src="assert/image/UserManagement.png" width="20" class="me-2"> User Management
+          </a>
+          <a class="nav-link text-dark" href="role-management.html">
+            <img src="assert/image/RoleManagement.png" width="20" class="me-2"> Role Management
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Main content -->
+      <main class="col-md-9 col-lg-10 p-4">
+
+        <!-- Filters -->
+        <div class="card mb-4">
+          <div class="card-header fw-bold">Question Management</div>
+          <div class="card-body">
+            <form class="row g-3">
+              <div class="col-md-4">
+                <label for="q" class="form-label">Name</label>
+                <input id="q" class="form-control" type="text" placeholder="Enter role name to search" />
+              </div>
+              <div class="col-md-4">
+                <label for="type" class="form-label">Type</label>
+                <select id="type" class="form-select">
+                  <option value="">Select item</option>
+                  <option>SingleChoice</option>
+                  <option>MultipleChoice</option>
+                  <option>True/False</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="statusActive" class="form-label">Status</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="statusActive" style="transform: scale(1.3);">
+                  <label class="form-check-label ms-2" for="statusActive">Active</label>
+                </div>
+              </div>
+              <div class="col-12 d-flex justify-content-between">
+                <button type="button" class="btn btn-info text-white">
+                  <i class="bi bi-plus-lg me-1"></i> Create
+                </button>
+                <div>
+                  <button type="reset" class="btn btn-outline-secondary me-2">
+                    <i class="bi bi-arrow-clockwise me-1"></i> Clear
+                  </button>
+                  <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-search me-1"></i> Search
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-        <form class="filters" action="#" onsubmit="return false;">
-          <div class="field">
-            <label for="q">Name</label>
-            <input id="q" class="input" type="text" placeholder="Enter role name to search" />
+
+        <!-- Question List -->
+        <div class="card mb-4">
+          <div class="card-header fw-bold">Question List</div>
+          <div class="table-responsive">
+            <table class="table table-hover align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>Content</th>
+                  <th>Type</th>
+                  <th>Answers</th>
+                  <th>Status</th>
+                  <th style="width:96px">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Who is the inventor of the airplane?</td>
+                  <td>MultipleChoice</td>
+                  <td>4</td>
+                  <td>Yes</td>
+                  <td>
+                    <a href="#"><i class="bi bi-pencil-fill text-info me-2"></i></a>
+                    <a href="#"><i class="bi bi-trash-fill text-danger"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>What is the capital of France?</td>
+                  <td>SingleChoice</td>
+                  <td>4</td>
+                  <td>Yes</td>
+                  <td>
+                    <a href="#"><i class="bi bi-pencil-fill text-info me-2"></i></a>
+                    <a href="#"><i class="bi bi-trash-fill text-danger"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Where is Viet Nam?</td>
+                  <td>MultipleChoice</td>
+                  <td>4</td>
+                  <td>Yes</td>
+                  <td>
+                    <a href="#"><i class="bi bi-pencil-fill text-info me-2"></i></a>
+                    <a href="#"><i class="bi bi-trash-fill text-danger"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="field">
-            <label for="type">Type</label>
-            <select id="type" class="input">
-              <option value="">Select item</option>
-              <option>SingleChoice</option>
-              <option>MultipleChoice</option>
-              <option>True/False</option>
-            </select>
-          </div>
-          <div class="field field-inline">
-            <label>Status</label>
-            <label class="check"><input type="checkbox" style="scale:1.5" /> Active</label>
-          </div>
-          <div class="actions-bar">
-            <div class="left">
-              <button type="button" class="btn primary">
-                <span class="icon plus" aria-hidden="true"><img src="assert/image/add.png" alt="add"
-                    style="height:16px;width:16px"></span>
-                Create
-              </button>
+
+          <!-- Pagination -->
+          <div class="d-flex justify-content-between align-items-center px-3 pb-3">
+            <div>
+              <label class="me-2">Items per page:</label>
+              <select class="form-select form-select-sm d-inline-block" style="width: auto;">
+                <option>10</option>
+                <option>20</option>
+                <option>50</option>
+              </select>
             </div>
-            <div class="right">
-              <button type="reset" class="btn ghost">
-                <span class="icon reset" aria-hidden="true" style="margin-right:6px"><img src="assert/image/clear.png"
-                    alt="clear" style="height:16px;width:16px"></span>
-                Clear
+            <nav>
+              <ul class="pagination pagination-sm mb-0">
+                <li class="page-item"><a class="page-link" href="#">«</a></li>
+                <li class="page-item"><a class="page-link" href="#">‹</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">›</a></li>
+                <li class="page-item"><a class="page-link" href="#">»</a></li>
+              </ul>
+            </nav>
+            <div class="text-muted">1–10 of 32</div>
+          </div>
+        </div>
+
+        <!-- Add Question -->
+        <div class="card mb-4">
+          <div class="card-header fw-bold">Add Question</div>
+          <div class="card-body">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="content" class="form-label">Content</label>
+                <textarea id="content" class="form-control" rows="3" placeholder="Enter question content"></textarea>
+              </div>
+              <div class="col-md-6">
+                <label for="qtype2" class="form-label">Question Type</label>
+                <select id="qtype2" class="form-select">
+                  <option value="">Select Question Type</option>
+                  <option>SingleChoice</option>
+                  <option>MultipleChoice</option>
+                  <option>True/False</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label for="activeQ" class="form-label">Status</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="activeQ" style="transform: scale(1.3);">
+                  <label class="form-check-label ms-2" for="activeQ">Active</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer d-flex justify-content-between">
+            <button class="btn btn-info text-white"><i class="bi bi-plus-lg me-1"></i> Show Answers</button>
+            <div>
+              <button class="btn btn-outline-secondary me-2"><i class="bi bi-arrow-clockwise me-1"></i> Cancel</button>
+              <button class="btn btn-primary">
+                <img src="assert/image/save.png" width="16" height="16" class="me-1" alt="save"> Save
               </button>
-              <button type="submit" class="btn primary">
-                <span class="icon search" aria-hidden="true" style="margin-right:6px"><img src="assert/image/search.png"
-                    alt="search" style="height:16px;width:16px"></span>
-                Search
-              </button>
+
             </div>
           </div>
-        </form>
-      </section>
-
-      <!-- Question list table -->
-      <section class="panel">
-        <div class="panel-head">
-          <h4>Question List</h4>
-        </div>
-        <div class="table-scroll">
-          <table class="table" aria-label="Question list">
-            <thead>
-              <tr>
-                <th>Content</th>
-                <th>Type</th>
-                <th>Answers</th>
-                <th>Status</th>
-                <th style="width:96px">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Who is the inventor of the airplane?</td>
-                <td>MultipleChoice</td>
-                <td>4</td>
-                <td>Yes</td>
-                <td class="actions">
-                  <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png" alt="edit"
-                      class="act-ico blue"></a>
-                  <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png" alt="delete"
-                      class="act-ico red"></a>
-                </td>
-              </tr>
-              <tr>
-                <td>What is the capital of France?</td>
-                <td>SingleChoice</td>
-                <td>4</td>
-                <td>Yes</td>
-                <td class="actions">
-                  <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png" alt="edit"
-                      class="act-ico blue"></a>
-                  <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png" alt="delete"
-                      class="act-ico red"></a>
-                </td>
-              </tr>
-              <tr>
-                <td>Where is Viet Nam?</td>
-                <td>MultipleChoice</td>
-                <td>4</td>
-                <td>Yes</td>
-                <td class="actions">
-                  <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png" alt="edit"
-                      class="act-ico blue"></a>
-                  <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png" alt="delete"
-                      class="act-ico red"></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="table-foot">
-          <label class="pager-size">Items per page:
-            <select>
-              <option>10</option>
-              <option>20</option>
-              <option>50</option>
-            </select>
-          </label>
-          <div class="pagination" role="navigation" aria-label="Pagination">
-            <button class="page-btn" title="First" aria-label="First">«</button>
-            <button class="page-btn" title="Prev" aria-label="Previous">‹</button>
-            <button class="page-btn is-current" aria-current="page">1</button>
-            <button class="page-btn">2</button>
-            <button class="page-btn">3</button>
-            <button class="page-btn" title="Next" aria-label="Next">›</button>
-            <button class="page-btn" title="Last" aria-label="Last">»</button>
-          </div>
-          <div class="summary">1–10 of 32</div>
-        </div>
-      </section>
-
-      <!-- Add Question form -->
-      <section class="panel add-question">
-        <div class="panel-head">
-          <h4>Add Question</h4>
         </div>
 
-        <form class="form two-col" action="#" onsubmit="return false;">
-          <div class="field">
-            <label for="content">Content</label>
-            <textarea id="content" class="input textarea" rows="3" placeholder="Enter question content"></textarea>
+        <!-- Answer List -->
+        <div class="card mb-4">
+          <div class="card-header fw-bold d-flex justify-content-between align-items-center">
+            Answer List
+            <button class="btn btn-info btn-sm text-white"><i class="bi bi-plus-lg me-1"></i> Add</button>
           </div>
-
-          <div class="field">
-            <label for="qtype2">Question Type</label>
-            <select id="qtype2" class="input" style="margin-bottom: 40px;">
-              <option value="">Select Question Type</option>
-              <option>SingleChoice</option>
-              <option>MultipleChoice</option>
-              <option>True/False</option>
-            </select>
-          </div>
-
-          <!-- Status: một hàng riêng bên dưới 2 cột -->
-          <div class="field status">
-            <label>Status</label>
-            <label class="check"><input type="checkbox" style="scale: 1.5;" /> Active</label>
-          </div>
-        </form>
-
-        <!-- Thanh nút dưới cùng -->
-        <div class="form-actions between addq-actions">
-          <button class="btn primary" type="button">
-            <span class="icon plus" aria-hidden="true" style="margin-right:6px">
-              <img src="assert/image/add.png" alt="add" style="height:16px;width:16px">
-            </span>
-            Show Answers
-          </button>
-          <div>
-            <button class="btn ghost" type="button"> <span class="icon reset" aria-hidden="true"
-                style="margin-right: 6px;"><img src="assert/image/clear.png" alt="clear"
-                  style="height: 16px; width: 16px;"></span> Cancel</button>
-            <button class="btn primary" type="submit"> <span class="icon save" aria-hidden="true"
-                style="margin-right: 6px;"><img src="assert/image/save.png" alt="save"
-                  style="height: 16px; width: 16px;"></span> Save</button>
+          <div class="table-responsive">
+            <table class="table table-hover align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>Content</th>
+                  <th>Is Correct</th>
+                  <th>Status</th>
+                  <th style="width:96px">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Wright brothers</td>
+                  <td>True</td>
+                  <td>Yes</td>
+                  <td>
+                    <a href="#"><i class="bi bi-pencil-fill text-info me-2"></i></a>
+                    <a href="#"><i class="bi bi-trash-fill text-danger"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Alexander Graham Bell</td>
+                  <td>False</td>
+                  <td>Yes</td>
+                  <td>
+                    <a href="#"><i class="bi bi-pencil-fill text-info me-2"></i></a>
+                    <a href="#"><i class="bi bi-trash-fill text-danger"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Albert Einstein</td>
+                  <td>False</td>
+                  <td>Yes</td>
+                  <td>
+                    <a href="#"><i class="bi bi-pencil-fill text-info me-2"></i></a>
+                    <a href="#"><i class="bi bi-trash-fill text-danger"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Charles Babbage</td>
+                  <td>False</td>
+                  <td>No</td>
+                  <td>
+                    <a href="#"><i class="bi bi-pencil-fill text-info me-2"></i></a>
+                    <a href="#"><i class="bi bi-trash-fill text-danger"></i></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-      </section>
 
-
-      <!-- Answer List -->
-      <section class="panel">
-        <div class="panel-head">
-          <h4>Answer List</h4>
-          <button class="btn primary small" type="button" style="margin-left:auto">
-            <span class="icon plus" aria-hidden="true" style="margin-right:6px"><img src="assert/image/add.png"
-                alt="add" style="height:16px;width:16px"></span>
-            Add
-          </button>
-        </div>
-        <div class="table-scroll">
-          <table class="table" aria-label="Answer list">
-            <thead>
-              <tr>
-                <th>Content</th>
-                <th>Is Correct</th>
-                <th>Status</th>
-                <th style="width:96px">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Wright brothers</td>
-                <td>True</td>
-                <td>Yes</td>
-                <td class="actions">
-                  <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png" alt="edit"
-                      class="act-ico blue"></a>
-                  <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png" alt="delete"
-                      class="act-ico red"></a>
-                </td>
-              </tr>
-              <tr>
-                <td>Alexander Graham Bell</td>
-                <td>False</td>
-                <td>Yes</td>
-                <td class="actions">
-                  <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png" alt="edit"
-                      class="act-ico blue"></a>
-                  <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png" alt="delete"
-                      class="act-ico red"></a>
-                </td>
-              </tr>
-              <tr>
-                <td>Albert Einstein</td>
-                <td>False</td>
-                <td>Yes</td>
-                <td class="actions">
-                  <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png" alt="edit"
-                      class="act-ico blue"></a>
-                  <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png" alt="delete"
-                      class="act-ico red"></a>
-                </td>
-              </tr>
-              <tr>
-                <td>Charles Babbage</td>
-                <td>False</td>
-                <td>Cell</td>
-                <td class="actions">
-                  <a href="#" title="Edit" aria-label="Edit"><img src="assert/image/edit.png" alt="edit"
-                      class="act-ico blue"></a>
-                  <a href="#" title="Delete" aria-label="Delete"><img src="assert/image/delete.png" alt="delete"
-                      class="act-ico red"></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- Add Answer -->
-      <section class="panel">
-        <div class="panel-head">
-          <h4>Add Answer</h4>
-        </div>
-        <form class="form two-col" action="#" onsubmit="return false;">
-          <div class="field" style="grid-column:1 / -1">
-            <label for="adesc">Description</label>
-            <input id="adesc" class="input" type="text" placeholder="Enter your email" />
+        <!-- Add Answer -->
+        <div class="card mb-4">
+          <div class="card-header fw-bold">Add Answer</div>
+          <div class="card-body">
+            <form class="row g-3">
+              <div class="col-12">
+                <label for="adesc" class="form-label">Description</label>
+                <input id="adesc" class="form-control" type="text" placeholder="Enter description" />
+              </div>
+              <div class="col-md-6">
+                <label for="correctAns" class="form-label">Is Correct?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="correctAns" style="transform: scale(1.3);">
+                  <label class="form-check-label ms-2" for="correctAns">Active</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="activeAns" class="form-label">Status</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="activeAns" style="transform: scale(1.3);">
+                  <label class="form-check-label ms-2" for="activeAns">Active</label>
+                </div>
+              </div>
+            </form>
           </div>
-          <div class="field field-inline">
-            <label>Is Correct?</label>
-            <label class="check"><input type="checkbox" style="scale: 1.5;" /> Active</label>
-          </div>
-          <div class="field field-inline">
-            <label>Status</label>
-            <label class="check"><input type="checkbox" style="scale: 1.5;" /> Active</label>
-          </div>
-        </form>
-        <div class="form-actions">
-          <button class="btn ghost" type="button"> <span class="icon reset" aria-hidden="true"
-              style="margin-right: 6px;"><img src="assert/image/clear.png" alt="clear"
-                style="height: 16px; width: 16px;"></span> Cancel</button>
-          <button class="btn primary" type="submit"> <span class="icon save" aria-hidden="true"
-              style="margin-right: 6px;"><img src="assert/image/save.png" alt="save"
-                style="height: 16px; width: 16px;"></span> Save</button>
-        </div>
-      </section>
+          <div class="card-footer d-flex justify-content-end">
+            <button class="btn btn-outline-secondary me-2"><i class="bi bi-arrow-clockwise me-1"></i> Cancel</button>
+            <button class="btn btn-primary">
+              <img src="assert/image/save.png" width="16" height="16" class="me-1" alt="save"> Save
+            </button>
 
-    </main>
+          </div>
+        </div>
+
+      </main>
+    </div>
   </div>
 
   <!-- Footer -->
-  <footer id="about">
-    <div class="container foot-grid">
-      <div>
-        <div class="brand-sm">
-          <span class="logo" aria-hidden="true">
-            <img src="assert/image/logo.png" alt="logo image">
-          </span>
-          Quizzes
-        </div>
-
-        <p class="muted" style="margin:20px 0 0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea,
-          saepe assumenda?
-        </p>
-      </div>
-
-      <div>
-        <h4 style="margin:0 0 8px">Menu</h4>
-        <div class="list">
-          <a href="#home" style="color: deepskyblue;">Home</a>
-          <a href="#quizzes" style="color: deepskyblue;">Quizzes</a>
-          <a href="#about" style="color: deepskyblue;">About</a>
-          <a href="#contact" style="color: deepskyblue;">Contact</a>
-        </div>
-      </div>
-
-      <div id="contact">
-        <h4 style="margin:0 0 8px">Contact</h4>
-        <div class="list muted">
-          <div> <img src="assert/image/email.png" alt="email"> <a href="#" style="color:deepskyblue; margin: 5px;">
-              Congdinh2021@gmail.com</a></div>
-          <div> <img src="assert/image/phone.png" alt="phone number"> <a href="#"
-              style="color:deepskyblue; margin: 5px;"> +84 944 551 356</a></div>
-          <div> <img src="assert/image/location.png" alt="address"> <a href="#" style="color:deepskyblue; margin: 5px;">
-              123 Xuan Dinh, Bac Tu Liem, Ha Noi, Viet Nam</a>
+  <footer class="bg-light border-top mt-5">
+    <div class="container py-4">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 text-start">
+          <div class="d-flex align-items-center fw-bold mb-2">
+            <img src="assert/image/logo.png" width="32" height="32" class="me-2"> Quizzes
           </div>
+          <p class="text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="col-md-4 text-start">
+          <h5>Menu</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-primary">Home</a></li>
+            <li><a href="quizzes.html" class="text-primary">Quizzes</a></li>
+            <li><a href="about.html" class="text-primary">About</a></li>
+            <li><a href="contact.html" class="text-primary">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-start">
+          <h5>Contact</h5>
+          <ul class="list-unstyled text-muted">
+            <li><i class="bi bi-envelope me-2"></i> congdinh2021@gmail.com</li>
+            <li><i class="bi bi-telephone me-2"></i> +84 944 551 356</li>
+            <li><i class="bi bi-geo-alt me-2"></i> 123 Xuan Dinh, Ha Noi</li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="copyright">
-      <div class="container">© <span id="y">2025</span> • Built as a single‑file HTML demo.</div>
+    <div class="bg-white border-top py-2 text-center text-muted">
+      © <span id="year"></span> • Built with Bootstrap
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
