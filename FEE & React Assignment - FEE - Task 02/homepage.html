@@ -5,154 +5,156 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Quizzes</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assert/css/homepage.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assert/css/style.css">
 </head>
 
 <body>
   <!-- Header -->
-  <header>
-    <div class="container nav">
-      <div class="brand" aria-label="Quizzes home">
-        <span class="logo" aria-hidden="true">
-          <img src="assert/image/logo.png" alt="logo image">
-        </span> 
-        Quizzes
+  <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="homepage.html">
+        <img src="assert/image/logo.png" alt="logo" width="40" height="40" class="me-2"> Quizzes
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="homepage.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="quizzes.html">Quizzes</a></li>
+          <li class="nav-item"><a class="nav-link" href="quiz-management.html">Management</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
       </div>
-     <nav class="navlinks" aria-label="Primary">
-        <a href="homepage.html">Home</a>
-        <a href="quizzes.html">Quizzes</a>
-        <a href="quiz-management.html">Management</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="auth">
-        <a class="btn ghost" href="login.html">Login</a>
-        <a class="btn primary" href="register.html">Register</a>
+      <div class="d-flex">
+        <a href="login.html" class="btn btn-outline-secondary me-2">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="container py-5 text-center text-md-start">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h1 class="fw-bold">Welcome to Quiz App</h1>
+        <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatum optio modi ipsa
+          accusantium voluptas molestiae sint distinctio.</p>
+        <a href="#quizzes" class="btn btn-primary">Take a Quiz</a>
+      </div>
+      <div class="col-md-6 text-center mt-4 mt-md-0">
+        <img src="assert/image/image.png" class="img-fluid rounded-4" alt="quiz image">
       </div>
     </div>
-  </header>
-  <!-- Main content -->
-  <main class="container">
-    <section class="hero" id="home">
-      <div>
-        <h1>Welcome to Quiz App</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui voluptatum optio modi ipsa accusantium ipsum,
-          voluptas, fuga molestiae sint distinctio, deserunt perferendis saepe nihil dicta dolor nobis libero sed ea.
-        </p>
-        <div class="hero-cta">
-          <a class="btn primary" href="#quizzes">Take a Quiz</a>
+  </section>
+
+  <!-- Quizzes -->
+  <section id="quizzes" class="container py-5">
+    <h2 class="fw-bold text-center mb-4">QUIZZES</h2>
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="assert/image/capitals..png" class="card-img-top" alt="capitals quiz">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Capitals of Country</h5>
+            <p class="card-text text-muted">Test your knowledge of country capitals.</p>
+            <div class="mt-auto">
+              <a href="#" class="btn btn-primary w-100">Start</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="illus-wrap" aria-hidden="true">
-        <!-- simple inline illustration -->
-        <img src="assert/image/image.png" alt="quiz image">
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="assert/image/capitals. (1).png" class="card-img-top" alt="capitals quiz">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Capitals of Country</h5>
+            <p class="card-text text-muted">Test your knowledge of country capitals.</p>
+            <div class="mt-auto">
+              <a href="#" class="btn btn-primary w-100">Start</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
-
-    <!-- Quizzes -->
-    <section id="quizzes" class="quizzes">
-      <h2 class="section-title">QUIZZES</h2>
-      <div class="grid">
-        <!-- Card 1 -->
-        <article class="card" aria-label="Capitals of Country quiz">
-          <div class="thumb" style="background:linear-gradient(135deg,#c7d2fe,#bfdbfe)">
-            <img src="assert/image/capitals..png" alt="capitals image" style="width:100%;height:100%;object-fit:cover;" />
-          </div>
-          <div class="card-body">
-            <div style="display:flex;align-items:center;justify-content:space-between;">
-              <h3 style="margin:0">Capitals of Country</h3>
-              <span class="meta" style="position:static;right:auto;top:auto;margin-left:12px;">15m</span>
-            </div>
-            <p>Test your knowledge of country capitals.</p>
-            <div class="actions">
-              <a class="btn primary btn-fullwidth" href="#">Start</a>
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="assert/image/capitals. (2).png" class="card-img-top" alt="capitals quiz">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Capitals of Country</h5>
+            <p class="card-text text-muted">Test your knowledge of country capitals.</p>
+            <div class="mt-auto">
+              <a href="#" class="btn btn-primary w-100">Start</a>
             </div>
           </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="card" aria-label="Capitals of Country quiz 2">
-          <div class="thumb" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0)">
-            <img src="assert/image/capitals. (1).png" alt="capitals image 1" style="width:100%;height:100%;object-fit:cover;" />
-          </div>
-          <div class="card-body">
-            <div style="display:flex;align-items:center;justify-content:space-between;">
-              <h3 style="margin:0">Capitals of Country</h3>
-              <span class="meta" style="position:static;right:auto;top:auto;margin-left:12px;">15m</span>
-            </div>
-            <p>Test your knowledge of country capitals.</p>
-            <div class="actions">
-              <a class="btn primary btn-fullwidth" href="#">Start</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="card" aria-label="Capitals of Country quiz 3">
-          <div class="thumb" style="background:linear-gradient(135deg,#e0f2fe,#bae6fd)">
-            <img src="assert/image/capitals. (2).png" alt="capitals image 2" style="width:100%;height:100%;object-fit:cover;" />
-          </div>
-          <div class="card-body">
-            <div style="display:flex;align-items:center;justify-content:space-between;">
-              <h3 style="margin:0">Capitals of Country</h3>
-              <span class="meta" style="position:static;right:auto;top:auto;margin-left:12px;">15m</span>
-            </div>
-            <p>Test your knowledge of country capitals.</p>
-            <div class="actions">
-              <a class="btn primary btn-fullwidth" href="#">Start</a>
-            </div>
-          </div>
-        </article>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- Footer -->
-    <footer id="about">
-    <div class="container foot-grid">
-      <div>
-        <div class="brand-sm">
-          <span class="logo" aria-hidden="true">
-            <img src="assert/image/logo.png" alt="logo image">
-          </span>
-          Quizzes
+<footer class="bg-light border-top mt-5">
+  <div class="container py-4">
+    <div class="row g-4 justify-content-center">
+      <!-- Cột 1 -->
+      <div class="col-md-4 text-start">
+        <div class="d-flex align-items-center fw-bold mb-2">
+          <img src="assert/image/logo.png" width="32" height="32" class="me-2" alt="logo"> Quizzes
         </div>
-
-        <p class="muted" style="margin:20px 0 0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe assumenda?
+        <p class="text-muted mb-0">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe assumenda?
         </p>
       </div>
 
-      <div>
-        <h4 style="margin:0 0 8px">Menu</h4>
-        <div class="list">
-          <a href="#home" style="color: deepskyblue;">Home</a>
-          <a href="#quizzes" style="color: deepskyblue;">Quizzes</a>
-          <a href="#about" style="color: deepskyblue;">About</a>
-          <a href="#contact" style="color: deepskyblue;">Contact</a>
-        </div>
+      <!-- Cột 2 -->
+      <div class="col-md-4 text-start">
+        <h5 class="mb-3">Menu</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-decoration-none text-primary">Home</a></li>
+          <li><a href="quizzes.html" class="text-decoration-none text-primary">Quizzes</a></li>
+          <li><a href="about.html" class="text-decoration-none text-primary">About</a></li>
+          <li><a href="contact.html" class="text-decoration-none text-primary">Contact</a></li>
+        </ul>
       </div>
 
-      <div id="contact">
-        <h4 style="margin:0 0 8px">Contact</h4>
-        <div class="list muted">
-          <div> <img src="assert/image/email.png" alt="email"> <a href="#" style="color:deepskyblue; margin: 5px;"> Congdinh2021@gmail.com</a></div>
-          <div> <img src="assert/image/phone.png" alt="phone number"> <a href="#" style="color:deepskyblue; margin: 5px;"> +84 944 551 356</a></div>
-          <div> <img src="assert/image/location.png" alt="address"> <a href="#" style="color:deepskyblue; margin: 5px;"> 123 Xuan Dinh, Bac Tu Liem, Ha Noi, Viet Nam</a></div>
-        </div>
+      <!-- Cột 3 -->
+      <div class="col-md-4 text-start">
+        <h5 class="mb-3">Contact</h5>
+        <ul class="list-unstyled text-muted">
+          <li class="mb-2 d-flex align-items-center">
+            <img src="assert/image/email.png" width="18" alt="email">
+            <a href="mailto:congdinh2021@gmail.com" class="text-primary ms-2">Congdinh2021@gmail.com</a>
+          </li>
+          <li class="mb-2 d-flex align-items-center">
+            <img src="assert/image/phone.png" width="18" alt="phone">
+            <a href="tel:+84944551356" class="text-primary ms-2">+84 944 551 356</a>
+          </li>
+          <li class="d-flex align-items-center">
+            <img src="assert/image/location.png" width="18" alt="address">
+            <span class="ms-2">123 Xuan Dinh, Bac Tu Liem, Ha Noi</span>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="copyright">
-      <div class="container">© <span id="y">2025</span> • Built as a single‑file HTML demo.</div>
-    </div>
-  </footer>
+  </div>
 
-  <script>
-    // tiny enhancement: keep footer year current
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <div class="bg-white border-top py-2 text-center text-muted">
+    © <span id="year"></span> • Built with Bootstrap
+  </div>
+</footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assert/js/main.js"></script>
 </body>
 
 </html>
